@@ -37,7 +37,7 @@ export interface ARTRenderableMixin extends ARTNodeMixin {
 }
 
 export interface ARTShapeProps extends ARTRenderableMixin {
-  d: string | Path;
+  d: string | Path | number[];
   width?: number;
   height?: number;
 }
@@ -66,6 +66,8 @@ export class Surface extends React.Component<ARTSurfaceProps> {}
 export class Text extends React.Component<ARTTextProps> {}
 
 export class Path {
+  constructor(path?: Path | string | number[]);
+
   /** Parse one or more SVG paths */
   push(...paths: string[]): this;
 
