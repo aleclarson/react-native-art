@@ -13,6 +13,11 @@
 
 @implementation ARTSurfaceView
 
+- (BOOL)isFlipped
+{
+  return YES;
+}
+
 - (BOOL)isOpaque
 {
   return NO;

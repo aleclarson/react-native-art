@@ -11,6 +11,11 @@
 
 @implementation ARTNode
 
+- (BOOL)isFlipped
+{
+  return YES;
+}
+
 - (void)didUpdateReactSubviews
 {
   [super didUpdateReactSubviews];
