@@ -20,7 +20,8 @@
     "ios": "react-native run-ios --project-path example/ios --scheme example",
     "flow-check": "flow check",
     "lint": "eslint . --cache",
-    "test": "jest"
+    "test": "jest",
+    "preinstall": "meta git update && sh scripts/preinstall.sh"
   },
   "dependencies": {
     "art": "^0.10.3",
