@@ -63,6 +63,10 @@
   }
 }
 
+static inline CGAffineTransform create2DTransform(CATransform3D t) {
+  return CGAffineTransformMake(t.m11, t.m12, t.m21, t.m22, t.m41, t.m42);
+}
+
 - (void)renderTo:(CGContextRef)context
 {
   if (self.opacity <= 0 || self.opacity >= 1 || (self.fill && self.stroke)) {
@@ -73,7 +77,7 @@
   // This is a terminal with only one painting. Therefore we don't need to paint this
   // off-screen. We can just composite it straight onto the buffer.
   CGContextSaveGState(context);
-  CGContextConcatCTM(context, self.transform);
+  CGContextConcatCTM(context, create2DTransform(self.transform));
   CGContextSetAlpha(context, self.opacity);
   [self renderLayerTo:context];
   CGContextRestoreGState(context);

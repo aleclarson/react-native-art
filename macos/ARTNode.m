@@ -23,7 +23,7 @@
   _opacity = opacity;
 }
 
-- (void)setTransform:(CGAffineTransform)transform
+- (void)setTransform:(CATransform3D)transform
 {
   [self invalidate];
   super.transform = transform;
@@ -35,6 +35,10 @@
   [container invalidate];
 }
 
+static inline CGAffineTransform create2DTransform(CATransform3D t) {
+  return CGAffineTransformMake(t.m11, t.m12, t.m21, t.m22, t.m41, t.m42);
+}
+
 - (void)renderTo:(CGContextRef)context
 {
   if (self.opacity <= 0) {
@@ -44,7 +48,7 @@
   if (self.opacity >= 1) {
     // Just paint at full opacity
     CGContextSaveGState(context);
-    CGContextConcatCTM(context, self.transform);
+    CGContextConcatCTM(context, create2DTransform(self.transform));
     CGContextSetAlpha(context, 1);
     [self renderLayerTo:context];
     CGContextRestoreGState(context);
@@ -52,7 +56,7 @@
   }
   // This needs to be painted on a layer before being composited.
   CGContextSaveGState(context);
-  CGContextConcatCTM(context, self.transform);
+  CGContextConcatCTM(context, create2DTransform(self.transform));
   CGContextSetAlpha(context, self.opacity);
   CGContextBeginTransparencyLayer(context, NULL);
   [self renderLayerTo:context];
