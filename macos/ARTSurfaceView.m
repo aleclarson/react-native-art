@@ -13,13 +13,9 @@
 
 @implementation ARTSurfaceView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (BOOL)isOpaque
 {
-  if (self = [super initWithFrame:frame]) {
-    self.opaque = NO;
-  }
-
-  return self;
+  return NO;
 }
 
 - (void)didUpdateReactSubviews
