@@ -86,7 +86,7 @@ RCT_ENUM_CONVERTER(CTTextAlignment, (@{
     return frame;
   }
 
-  CTFontRef font = (__bridge CTFontRef)[self UIFont:dict[@"font"]];
+  CTFontRef font = (__bridge CTFontRef)[self NSFont:dict[@"font"]];
   if (!font) {
     return frame;
   }
