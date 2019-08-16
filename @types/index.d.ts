@@ -37,7 +37,7 @@ export interface ARTRenderableMixin extends ARTNodeMixin {
 }
 
 export interface ARTShapeProps extends ARTRenderableMixin {
-  d: string;
+  d: string | Path;
   width?: number;
   height?: number;
 }
