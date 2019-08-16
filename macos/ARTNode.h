@@ -16,6 +16,7 @@
 @interface ARTNode : NSView
 
 @property (nonatomic, assign) CGFloat opacity;
+@property (nonatomic, assign) CATransform3D transform;
 
 - (void)invalidate;
 - (void)renderTo:(CGContextRef)context;

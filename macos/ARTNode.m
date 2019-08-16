@@ -26,7 +26,7 @@
 - (void)setTransform:(CATransform3D)transform
 {
   [self invalidate];
-  super.transform = transform;
+  _transform = transform;
 }
 
 - (void)invalidate
