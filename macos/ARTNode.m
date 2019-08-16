@@ -11,22 +11,10 @@
 
 @implementation ARTNode
 
-- (void)insertReactSubview:(NSView *)subview atIndex:(NSInteger)atIndex
-{
-  [super insertReactSubview:subview atIndex:atIndex];
-  [self insertSubview:subview atIndex:atIndex];
-  [self invalidate];
-}
-
-- (void)removeReactSubview:(NSView *)subview
-{
-  [super removeReactSubview:subview];
-  [self invalidate];
-}
-
 - (void)didUpdateReactSubviews
 {
-  // Do nothing, as subviews are inserted by insertReactSubview:
+  [super didUpdateReactSubviews];
+  [self invalidate];
 }
 
 - (void)setOpacity:(CGFloat)opacity
