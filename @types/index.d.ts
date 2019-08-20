@@ -89,6 +89,9 @@ export class Path {
   /** Draw a line to the first point in the current sub-path and begins a new sub-path */
   close(): this;
 
+  /** Multiply the coordinates */
+  scale(x: number, y?: number): this;
+
   curve(
     c1x: number,
     c1y: number,
