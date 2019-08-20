@@ -92,6 +92,9 @@ export class Path {
   /** Multiply the coordinates */
   scale(x: number, y?: number): this;
 
+  /** Add to the coordinates */
+  translate(x: number, y: number): this;
+
   curve(
     c1x: number,
     c1y: number,
