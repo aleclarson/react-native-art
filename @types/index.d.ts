@@ -131,5 +131,5 @@ export class Path {
 
   counterArcTo(x: number, y: number, rx: number, ry?: number): this;
 
-  toJSON(): string;
+  toJSON(): number[];
 }
