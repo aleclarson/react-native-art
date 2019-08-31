@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "path": "./art"
+    },
+    {
+      "path": "./lib"
+    },
+    {
+      "path": "./macos"
+    },
+    {
+      "path": "./example"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "core/**.{js,d.ts}": true
+    }
+  }
+}
