@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleProp, ViewStyle} from 'react-native-macos';
+import {StyleProp, ViewStyle, NativeMethodsMixin} from 'react-native-macos';
 
 export type StrokeJoin = 'miter' | 'bevel' | 'round';
 export type StrokeCap = 'butt' | 'square' | 'round';
@@ -37,9 +37,11 @@ export interface ARTRenderableMixin extends ARTNodeMixin {
 }
 
 export interface ARTShapeProps extends ARTRenderableMixin {
-  d: string | Path | number[];
+  d?: string | Path | number[];
   width?: number;
   height?: number;
+  children?: string | string[];
+  ref?: React.RefObject<NativeMethodsMixin>;
 }
 
 export interface ARTTextProps extends ARTRenderableMixin {
