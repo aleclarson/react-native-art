@@ -11,6 +11,9 @@
     },
     {
       "path": "./example"
+    },
+    {
+      "path": "@types"
     }
   ],
   "settings": {
