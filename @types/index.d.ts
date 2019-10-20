@@ -68,6 +68,11 @@ export class Surface extends React.Component<ARTSurfaceProps> {}
 export class Text extends React.Component<ARTTextProps> {}
 
 export class Path {
+  penX: number;
+  penY: number;
+  penDownX: number | null;
+  penDownY: number | null;
+
   constructor(path?: Path | string | number[]);
 
   /** Parse one or more SVG paths */
