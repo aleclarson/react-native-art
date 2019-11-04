@@ -22,7 +22,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "art": "^0.10.3",
+    "art": "npm:@alloc/art@^0.11.0-alpha.99eb507",
     "invariant": "^2.2.4",
     "prop-types": "^15.7.2"
   },
