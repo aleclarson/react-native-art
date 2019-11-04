@@ -1,9 +1,8 @@
 {
-  "name": "@react-native-community/art",
-  "version": "1.0.1",
+  "name": "@alloc/react-native-art",
+  "version": "0.0.0",
   "license": "MIT",
-  "author": "@react-native-community",
-  "homepage": "https://github.com/react-native-community/react-native-art",
+  "author": "Alec Larson",
   "description": "React Native module that allows you to draw vector graphics",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
