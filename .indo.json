@@ -1,0 +1,8 @@
+{
+  "repos": {
+    "art": {
+      "url": "https://github.com/aleclarson/art.git",
+      "head": "v0.11"
+    }
+  }
+}

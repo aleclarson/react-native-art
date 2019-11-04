@@ -20,8 +20,7 @@
     "ios": "react-native run-ios --project-path example/ios --scheme example",
     "flow-check": "flow check",
     "lint": "eslint . --cache",
-    "test": "jest",
-    "preinstall": "meta git update && sh scripts/preinstall.sh"
+    "test": "jest"
   },
   "dependencies": {
     "art": "^0.10.3",
@@ -43,6 +42,6 @@
     "metro-react-native-babel-preset": "^0.54.1",
     "prettier": "^1.18.2",
     "react": "^16.8.3",
-    "react-native-macos": "github:aleclarson/react-native-macos#dev"
+    "react-native": "npm:@alloc/react-native-macos@^0.20.0"
   }
 }
