@@ -6,6 +6,12 @@
   "description": "React Native module that allows you to draw vector graphics",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
+  "files": [
+    "lib",
+    "@types",
+    "macos",
+    "!**/{DerivedData,xcuserdata,__tests__,.DS_Store}"
+  ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android --root example",
