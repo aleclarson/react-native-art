@@ -6,13 +6,6 @@
   "description": "React Native module that allows you to draw vector graphics",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
-  "keywords": [
-    "react-native",
-    "react native",
-    "react-native-art",
-    "react-native-community",
-    "art"
-  ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android --root example",
@@ -40,5 +33,12 @@
     "prettier": "^1.18.2",
     "react": "^16.8.3",
     "react-native": "npm:@alloc/react-native-macos@^0.20.0"
-  }
+  },
+  "keywords": [
+    "react-native",
+    "react native",
+    "react-native-art",
+    "react-native-community",
+    "art"
+  ]
 }
