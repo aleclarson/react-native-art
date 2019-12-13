@@ -35,7 +35,7 @@
     "@types/react": "^16.9.1",
     "eslint": "^5.16.0",
     "flow-bin": "^0.92.0",
-    "jest": "^24.8.0",
+    "jest": "^24.1.0",
     "prettier": "^1.18.2",
     "react": "^16.8.3",
     "react-native": "npm:@alloc/react-native-macos@^0.20.0"
